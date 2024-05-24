@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации</title>
+</head>
+
+<body>
+    <h1 id="your-id-name">Авторизуйтесь для входа на сайт</h1>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Логин">
+    <br><br>
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Пароль">
+    <br><br>
+    <input id="lala" type="button" value="Войти" onclick="login()">
+        <button id="loc" onclick="clearFiled()">Clear</button>
+    </body>
+    <script> 
+    function clearFiled() {
+        document.getElementById("username").value="";
+        document.getElementById("password").value="";
+    }
+    </script>
+<script>
+    alert('Вы хотите получать ежедневные уведомления на сайте?')
+</script>
+
+
+
+
+<script>
+    function login() {
+        elem = document.getElementById("username");
+        username = elem.value
+        paselem = document.getElementById("password");
+        password = paselem.value
+        if (password == "12345" & username == "admin") {
+            alert("Нажмите ОК, чтобы перейти на другую страницу");
+            window.open("stranicaadmina.html", "_self");
+        } else {
+            alert("Неправильный логин или пароль");
+
+        }
+        if (password == "00000" & username == "user") {
+            alert("Нажмите ОК, чтобы перейти на другую страницу");
+            window.open("index.html", "_self");
+        } else {
+            alert("Неправильный логин или пароль");
+        }
+    }
+   lala.onmouseover = function () {
+    lala.style.background= "green";
+    document.getElementById ("lala").style.color = "white";
+   };
+    lala.onmouseleave = function() {
+        lala.style.background= "white";
+    }
+
+
+
+</script>
+
+
+
+</html>

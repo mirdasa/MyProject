@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+    <title>Страница регистарции</title>
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="alert alert-danger">
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endwith %}
+        <form method="post" id="formContent">
+          
+          <h2 class="active"> Авторизация  </h2>
+         
+            <input type="username" id="username" class="fadeIn second" name="username" placeholder="login" required>
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+            <input type="submit" class="fadeIn fourth" value="Войти">
+
+            <a href="register">Перейти на страницу регистрации</a>    
+      
+         
+          </form>
+      
+        </div>
+      </div>
+
+      
+    </body>
+
+
+
+    <script> 
+        function clearFiled() {
+            document.getElementById("username").value="";
+            document.getElementById("password").value="";
+        }
+        </script>
+    
+    
+    
+    
+    
+    <script>
+
+       lala.onmouseover = function () {
+        lala.style.background= "green";
+        document.getElementById ("lala").style.color = "white";
+       };
+        lala.onmouseleave = function() {
+            lala.style.background= "white";
+        }
+    
+    
+    
+    </script>
+    
+
+</html>

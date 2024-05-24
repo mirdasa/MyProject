@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Title</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+
+<body>
+
+
+  <div class="navbar">
+    <!-- <a class="logo" href="index.html"><img class="icon" src="логотип..svg" alt="dots icon"></a> -->
+    <a class="logo" href="index.html"><img class="icon" src="/static/images/логотип..svg" alt="dots icon"></a>
+    <a href="test.html">Наши врачи</a>
+    <a href="test2.html">Услуги и цены</a>
+    <a href="test3.html">Клиники и аптеки</a>
+    <a href="test4.html">Наши контакты</a>
+
+    {% if current_user.is_authenticated %}
+    <p class="mt-5">Привет, {{ current_user.username }}!</p>
+    <a href="{{ url_for('logout') }}" class="right">Выход</a>
+    {% else %}
+    <a class="right" href="login">Переход на страницу авторизации</a>
+
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="main">
+      <div class="header">
+
+        <h1>Аксис</h1>
+        <p> ветеринарная клиника</p>
+
+      </div>
+
+      <div style="padding: 10px 0;">
+        <h5>Январь 22, 2024</h5>
+      </div>
+      <div id="container" style="padding: 10px 0;">
+        <div class="fakeimg">
+          <img height="250px" style="border-radius: 25px; padding: 0 10px;"
+            src="https://www.proplan.ru/sites/default/files/2022-09/uhod-za-sherstyu-sobaki%201920x767.jpg">
+        </div>
+
+        <div class="fakeimg">
+          <img height="250px" style="border-radius: 25px; object-fit:cover; padding: 0 10px;"
+            src="https://gas-kvas.com/grafic/uploads/posts/2023-09/1695881156_gas-kvas-com-p-kartinki-korgi-23.jpg">
+        </div>
+      </div>
+
+      <div style=" padding: 10px 0;">
+        <h2 style="font-weight: 800;">Многопрофильная ветеринарная клиника АКСИС оснащена современным диагностическим
+          оборудованием.</h2>
+        <p style="padding: 10px 0;">В клинике работают высококвалифицированные специалисты со стажем работы более 12
+          лет, участвующие в активной
+          научной деятельности. Наши доктора постоянно углубляют свои знания и навыки, прослушивая курсы повышения
+          квалификации на базе ветеринарных клиник, ВУЗов в России и за рубежом.</p>
+      </div>
+    </div>
+    <div class="side">
+      <div
+        style=" padding: 10px 0; display: block; height: 80px; background-color: beige; padding: 25px; border-radius: 25px;">
+        <img style="float: left; height: 32px; width: 32px;" src="https://www.svgrepo.com/show/528888/cat.svg">
+        <p style="float: left; color: black; font-size: 32px; margin-left: 10px;">Скоро весна! Быстрее на вакцинацию!
+        </p>
+      </div>
+
+      <div id="container" style="padding: 10px 0;">
+        <div class="fakeimg">
+          <img height="250px" style="border-radius: 25px; padding: 0 10px; object-fit:cover;"
+            src="https://aroundpet.ru/wp-content/uploads/kak-uhazhivat-za-sherstyu-koshki.jpg">
+        </div>
+
+        <div class="fakeimg">
+          <img height="250px" style="border-radius: 25px; object-fit:cover; padding: 0 10px;"
+            src="https://gas-kvas.com/grafic/uploads/posts/2023-09/1695971569_gas-kvas-com-p-kartinki-bobra-1.jpg">
+        </div>
+      </div>
+
+      <div style=" padding: 10px 0;">
+        <h1>В наличии имеются импортные Вакцины:</h1>
+        <h2>Собаки (поливалентная вакцина):</h2>
+        <p>НОБИВАК NOBIVAC DHPPi + Lepto + RABIES (Голландия) (вакцина против чумы плотоядных, парвовирусного энтерита,
+          парагриппа, аденовирусного гепатита, лептоспироза и бешенства);</p>
+        <p>НОБИВАК NOBIVAC DHPPi + Lepto (Голландия) (вакцина против чумы плотоядных, парвовирусного энтерита,
+          парагриппа,
+          аденовирусного гепатита, лептоспироза);</p>
+        <p>НОБИВАК NOBIVAC RABIES (Голландия) (вакцина против бешенства)</p>
+        <p>ЭУРИКАН EURICAN DHPPi + Lepto + RABIES (Франция) (вакцина против чумы плотоядных, парвовирусного энтерита,
+          парагриппа, аденовирусного гепатита, лептоспироза и бешенства);</p>
+        <p>ЭУРИКАН EURICAN DHPPi + Lepto (Франция) (вакцина против чумы плотоядных, парвовирусного энтерита, парагриппа,
+          аденовирусного гепатита, лептоспироза);</p>
+        <h2>Кошки (поливалентная вакцина):</h2>
+        <p>НОБИВАК NOBIVAC RABIES (Голландия) (вакцина против бешенства);</p>
+        <p>БИОФЕЛ (RCP+R) (Чехия) (вакцина против ринотрахеита, панлейкопении, калицивироза) + (бешенство);</p>
+        <p>БИОФЕЛ (RCP) (Чехия) (вакцина против ринотрахеита, панлейкопении, калицивироза);</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <a class="logo"><img class="icon" src="/static/images/логотип..svg" alt="dots icon"></a>
+    <a>© 2013-2024</a>
+    <a>Weissgauff</a>
+    <a>Все права защищены</a>
+    <a class="right">Условия использования и политика конфиденциальности</a>
+
+  </div>
+
+</body>
+
+</html>

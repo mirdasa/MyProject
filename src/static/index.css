@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+h1 {
+  color: #ffffff;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 22px;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  background: url("https://bogatyr.club/uploads/posts/2023-01/1674954748_bogatyr-club-p-fon-dlya-khedera-fon-krasivo-11.jpg");
+  border-radius: 20px;
+  margin: 20px 0;
+
+}
+
+.navbar {
+  background-color: #333;
+}
+
+p {
+  color: #d1d1d1;
+}
+
+h2 {
+  color: #d1d1d1;
+}
+
+h5 {
+  color: #d1d1d1;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  backpground-color: #ddd;
+  color: black;
+}
+
+.fakeimg {
+  background-color: #333;
+  width: 50%;
+}
+
+.row {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  min-height: 200%;
+  max-height: 200%;
+  overflow: hidden;
+  background: #333;
+  min-height: 85vh;
+}
+
+.side {
+  background-color: #333;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: #333;
+  padding: 0 50px;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.cardrow {
+  position: relative;
+  margin: 15px;
+  padding: 0px;
+  max-width: 100%;
+  min-height: 200%;
+  max-height: 200%;
+  overflow: hidden;
+}
+
+iframe {
+  border-radius: 25px;
+}
+
+body {
+  background-color: #333;
+}
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.card {
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 10px 0 #ffffff);
+  width: 400px;
+  height: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  right: -15px;
+  background: #7952b3;
+  height: 220px;
+  width: 25px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover::before {
+  transition-delay: 0.2s;
+
+  transform: scale(40);
+}
+
+.card:hover {
+  color: #ffffff;
+
+}
+
+.card p {
+  padding: 10px 0;
+}
+
+
+.logo {
+  height: 18px;
+  width: 125px;
+}
+
+
+.footer a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #565656;
+  height: 100px;
+}
+
+.footer a.right {
+  float: right;
+}
+
+.footer a:hover {
+  backpground-color: #ddd;
+  color: black;
+}
